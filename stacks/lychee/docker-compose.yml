@@ -5,7 +5,7 @@ services:
     container_name: lychee_mariadb
     restart: always
     volumes:
-      - /home/jrivera/data/mariadb/config
+      - /media/jrivera/Storage/data/mariadb/config
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_DATABASE=lychee
@@ -13,7 +13,7 @@ services:
       - MYSQL_PASSWORD=dbpassword
       - PGID=1000
       - PUID=1000
-      - TZ=Europe/London
+      - TZ=Los_Angeles
   lychee:
     image: lscr.io/linuxserver/lychee:latest
     container_name: lychee
@@ -21,8 +21,8 @@ services:
     depends_on:
       - mariadb
     volumes:
-      - /home/jrivera/data/lychee/config
-      - /home/jrivera/data/lycheepictures
+      - /media/jrivera/Storage/data/lychee/config
+      - /media/jrivera/Storage/data/lycheepictures
     environment:
       - DB_HOST=mariadb
       - DB_USERNAME=lychee
@@ -31,6 +31,6 @@ services:
       - DB_PORT=3306
       - PGID=1000
       - PUID=1000
-      - TZ=Europe/London
+      - TZ=Los_Angeles
     ports:
       - 8081:80
