@@ -1041,6 +1041,18 @@
           "label": "Postgres password"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Lychee",
+      "description": "self hosted photo",
+      "categories": ["media"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
+      "repository": {
+        "url": "https://github.com/jrivera/templates",
+        "stackfile": "stacks/lychee/docker-compose.yml"
+      }
     }
   ]
 }
